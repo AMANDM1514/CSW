@@ -1,0 +1,46 @@
+<!-- Q.1) Create a webpage using jQuery that contains three buttons to change the background color of the entire page to red, blue, or green, 
+depending on which button is clicked. Additionally, add a separate button that toggles the visibility of all <div> elements on the page. 
+    When the toggle button is clicked, the <div> elements should either be shown or hidden based on their current visibility state. 
+    Ensure that the background color change and visibility toggle functionalities work smoothly together. -->
+
+
+<DOCTYPE! html>
+    <html>
+        <head>
+            <title>Q1</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#redbutton").click(function(){
+                        $('body').css('background-color', 'red');
+                    });
+                    $('#blue').click(function(){
+                        $('body').css('background-color', 'blue');
+                    });
+                    $('#green').click(function(){
+                        $('body').css('background-color', 'green');
+                    });
+                    $('#toggleBtn').click(function(){
+                        $(".box").toggle();
+                    });
+                });
+            </script>
+            <style>
+                .box{
+                    margin: 20px;
+                    padding: 20px;
+                    height: 100px;
+                    background-color: blueviolet;
+                }
+                
+            </style>
+        </head>
+        <body>
+            <button id="redbutton">RED</button>
+            <button id="blue">BLUE</button>
+            <button id="green">GREEN</button><br>
+
+            <div class="box"></div>
+            <button id="toggleBtn">TOGGLE</button>
+        </body>
+    </html>

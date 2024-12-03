@@ -1,0 +1,40 @@
+<!-- Q.5) Write a jQuery program to manipulate an unordered list (<ul>) containing the items 'Getting Started with Full Stack,' 'HTML,' and 'CSS.' 
+    Use the append() method to add a new list item 'CSS' at the end of the list, the prepend() method to add 'Introduction to Full Stack Development' 
+    at the beginning, the after() method to insert a paragraph 'Topics updated' immediately after the list, 
+    and the before() method to add a heading 'List of Topics Covered' immediately before the list. -->
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q5</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <Script>
+            $(document).ready(function(){
+                $("#btn1").click(function(){
+                    $("ul").append("<li>CSS</li>")
+                });
+                $("#btn2").click(function(){
+                    $("ul").prepend("<li>Introduction to Full Stack Development</li>")
+                });
+                $("#btn3").click(function(){
+                    $("ul").after("<p>Topics updated</p>")
+                });
+                $("#btn4").click(function(){
+                    $("ul").before("<h1>List of Topics Covered</h1>")
+                });
+            });
+        </Script>
+    </head>
+    <body>
+        <button id="btn1">Append</button>
+        <button id="btn2">Prepend</button>
+        <button id="btn3">After</button>
+        <button id="btn4">Before</button><br><br>
+        <ul>
+            <li>Getting Started with Full Stack</li>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </body>
+</html>

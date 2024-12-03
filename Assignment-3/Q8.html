@@ -1,0 +1,38 @@
+<!-- Q.8) Create a webpage that includes a text box and a button. 
+Write jQuery code that removes the element with an ID matching the text entered in the text box when the button is clicked.
+The webpage should initially contain a <div> with paragraphs, each having a unique ID. -->
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q8</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#removebtn").click(function(){
+                    var elementID=$("#elementID").val();
+
+                    $("#" +elementID).remove();
+                    $("#elementID").val('');
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div>
+            <label for="elementID">Enter ID to Remove: </label>
+            <input type="text" id="elementID" placeholder="Enter ID">
+            <button id="removebtn">Remove Element</button>
+        </div>
+
+        <div>
+            <p id="para1">This is the first paragraph with ID para1.</p>
+            <p id="para2">This is the second paragraph with ID para2.</p>
+            <p id="para3">This is the third paragraph with ID para3.</p>
+            <p id="para4">This is the fourth paragraph with ID para4.</p>
+            <p id="para5">This is the fifth paragraph with ID para5.</p>
+        </div>
+    </body>
+</html>
