@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q4</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#textBtn").click(function(){
+                    alert("Text Content: "+$("#text1").text());
+                });
+                $("#htmlBtn").click(function(){
+                    alert("HTML Content: "+$("#html1").html());
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p id="text1">This is the text context of paragraph.</p>
+
+        <div id="html1">
+            <h2>HTML Content..</h2>
+            <p>This is the HTML context.</p>
+        </div><br>
+        <button id="textBtn">Fetch Text</button>
+        <button id="htmlBtn">Fetch HTML</button>
+    </body>
+</html>

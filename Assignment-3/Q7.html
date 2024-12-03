@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Q7</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#rowBtn").click(function(){
+                    var name= $("#name1").val();
+                    var age= $("#age1").val();
+                    var grade= $("#grade1").val();
+
+                    if(name && age && grade){
+                        $("#studentTable tbody").append(
+                            `<tr>
+                                <td>${name}</td>
+                                <td>${age}</td>
+                                <td>${grade}</td>
+                            </tr>`
+                        );
+                        $("#name1").val('');
+                        $("#age1").val('');
+                        $("#grade1").val('');
+                    }
+                    else{
+                        alert("Please fill this field.");
+                    }
+                });
+                $("#colorBtn").click(function(){
+                    $("#studentTable td").css("color", "red");
+                });
+            });
+        </script>
+
+        <style>
+            table{
+                width:100%;
+                border-collapse: collapse;
+                margin-top:20px;
+            }
+            table, th, td{
+                border:1px solid black;
+            }
+            th, td{
+                padding: 10px;
+                text-align: center;
+            }
+            td{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <label for="name1">Name: </label>
+            <input type="text" id="name1" placeholder="Enter Name">
+            <label for="age1">Age: </label>
+            <input type="text" id="age1" placeholder="Enter Age">
+            <label for="grade1">Grade: </label>
+            <input type="text" id="grade1" placeholder="Enter Grade">
+            
+        </div><br>
+
+        <button id="rowBtn">Add Row</button>
+        <button id="colorBtn">Change Color</button>
+
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </body>
+</html>

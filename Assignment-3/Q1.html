@@ -1,0 +1,42 @@
+<DOCTYPE! html>
+    <html>
+        <head>
+            <title>Q1</title>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(document).ready(function(){
+                    $("#redbutton").click(function(){
+                        $('body').css('background-color', 'red');
+                    });
+                    $('#blue').click(function(){
+                        $('body').css('background-color', 'blue');
+                    });
+                    $('#green').click(function(){
+                        $('body').css('background-color', 'green');
+                    });
+                    $('#toggleBtn').click(function(){
+                        $(".box").toggle();
+                    });
+                });
+            </script>
+            <style>
+                .box{
+                    margin: 20px;
+                    padding: 20px;
+                    height: 100px;
+                    background-color: blueviolet;
+                }
+                /* .hidden{
+                    display: none;
+                } */
+            </style>
+        </head>
+        <body>
+            <button id="redbutton">RED</button>
+            <button id="blue">BLUE</button>
+            <button id="green">GREEN</button><br>
+
+            <div class="box"></div>
+            <button id="toggleBtn">TOGGLE</button>
+        </body>
+    </html>
